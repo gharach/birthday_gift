@@ -11,7 +11,6 @@
             font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--tg-theme-text-color);
-            margin: 48px 24px;
             padding: 0;
             color-scheme: var(--tg-color-scheme);
         }
@@ -59,6 +58,12 @@
         #viewport-params-expand {
             top: 30px;
         }
+        .text-box{
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+            padding: 100px;
+        }
     </style>
 </head>
 
@@ -70,8 +75,12 @@
                 <img src="./assets/tarlan_ai.png" style="width: 100%;"/>
 
             </div>
-            <button class="btn js-confetti">PRESS ME</button>
-            <audio src="https://assets.codepen.io/1256430/whistle.mp3" id="sound" preload="auto" hidden></audio>
+            <div class="text-box">
+                <h1>Happy birthday darling</h1>
+                <p>Wish you all the best!<p>
+                <button class="btn js-confetti">Happy Birthday 🎂</button>
+                <audio src="https://assets.codepen.io/1256430/whistle.mp3" id="sound" preload="auto" hidden></audio>
+            </div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
@@ -207,12 +216,12 @@
     <script>eruda.init();</script>
 <style>
     body {
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 100%;
-        min-height: 100vh;
         background-color: white;
     }
 
@@ -226,7 +235,7 @@
 }
 
 .box {
-    padding: 0 20px;
+    /*padding: 0 20px;*/
 }
 
 /* Make text visible on image background */
